@@ -1,0 +1,3 @@
+[virtualenvs]
+in-project = true  # required for vs code to find the virtualenv
+create = true

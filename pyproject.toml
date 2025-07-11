@@ -1,0 +1,84 @@
+# IMPORTANT: some tools are configured in scripts.py as it significantly speeds up their execution
+[tool.poetry]
+name = "myproject"
+version = "0.1.0"
+description = ""
+authors = ["Johann Bernhardt <johann.bernhardt@posteo.de>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.dev.dependencies]
+flake8 = "^7.1.0"
+mypy = "^1.10.1"
+black = "^24.4.2"
+isort = "^5.13.2"
+setuptools = "^70.2.0"  # PyCharm requires this until an update is available
+flake8-pyprojecttoml = "^0.0.2"
+flake8-comprehensions = "^3.15.0"
+flake8-print = "^5.0.0"
+pep8-naming = "^0.14.1"
+flake8-eradicate = "^1.5.0"
+flake8-fixme = "^1.1.1"
+flake8-datetimez = "^20.10.0"
+flake8-noqa = "^1.4.0"
+coverage = "^7.6.0"
+flake8-assertive = "^2.1.0"
+flake8-pep604 = "^1.1.0"
+flake8-pep585 = "^0.1.7"
+pytest = "^8.3.3"
+
+[tool.poetry.scripts]
+format = "scripts:format_and_sort"
+check = "scripts:check"
+test = "scripts:test"
+integration-test = "scripts:integration_test"
+coverage = "scripts:coverage"
+coverage-html = "scripts:coverage_html"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+preview = true  # preview of string processing feature 2023
+line-length = 120
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 120
+
+[tool.flake8]
+noqa-require-code = true
+max-line-length = 120
+ignore = [
+    "E203",
+    "W503"
+]
+exclude = [
+    ".github",
+    ".venv",
+    ".vscode",
+    "htmlcov",
+]
+
+[tool.mypy]
+plugins = [
+  "pydantic.mypy"
+]
+enable_error_code = [
+    "ignore-without-code"
+]
+disallow_untyped_defs = true
+disallow_any_unimported = true
+check_untyped_defs = true
+warn_return_any = true
+warn_unused_ignores = true
+follow_untyped_imports = true
+
+# Deactivate import following for incompatible packages (eg. nvector crashes mypy)
+# [[tool.mypy.overrides]]
+# module = "nvector.*"
+# follow_untyped_imports = false
