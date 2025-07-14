@@ -7,7 +7,6 @@ import pytest
 from _pytest.config import ExitCode
 from coverage import Coverage
 
-
 _project_name = "MyProject"
 _project_directory = "myproject"
 
