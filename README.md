@@ -2,7 +2,7 @@
 
 [![Python 3.12+](https://img.shields.io/badge/python-3.12+-blue.svg)](https://www.python.org/downloads/release/python-3120/)
 [![Poetry](https://img.shields.io/endpoint?url=https://python-poetry.org/badge/v0.json)](https://python-poetry.org/)
-[![pr-checks](https://github.com/SinTh0r4s/PythonSetup/workflows/pr-checks/badge.svg)](https://github.com/SinTh0r4s/PythonSetup/actions)
+[![pr-checks](https://github.com/SinTh0r4s/PythonSetup/actions/workflows/pr-check.yml/badge.svg)](https://github.com/SinTh0r4s/PythonSetup/actions/workflows/pr-check.yml)
 [![Coverage](https://img.shields.io/badge/coverage-100%25-green)](https://github.com/cariad-t2/TraceK.PY-SDK/actions/workflows/pr-check.yml)
 [![mypy badge](https://www.mypy-lang.org/static/mypy_badge.svg)](https://github.com/python/mypy)
 [![Linting: flake8](https://img.shields.io/badge/linting-flake8-ffffff.svg)](https://github.com/PyCQA/flake8)
