@@ -3,4 +3,4 @@ def add(a: int, b: int) -> int:
 
 
 if __name__ == "__main__":  # pragma: no cover - main
-    print("Hello world!")
+    print("Hello world!")  # noqa: T201
