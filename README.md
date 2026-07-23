@@ -33,3 +33,5 @@
 - `poetry run integration-test` invokes pytest to run all integration-tests.
 - `poetry run coverage` invokes coverage and reports all non-covered files of the framework.
 - `poetry run coverage-html` like `coverage`, but creates a HTML report with more details.
+
+- Hello!
